@@ -1,0 +1,11 @@
+<!-- to include any header or footer from other file -->
+<%- include('./partials/header'); -%>
+<h1>HOME</h1>
+<!-- to use any variable  -->
+<p><%= homeStartingContent %></p>
+<% posts.forEach((post)=>{ %>
+<h1><%= post.title %></h1>
+
+<p><%= post.body.slice(0,100) %>...
+<a href="/posts/<%= post.title %>">Read More</a></p>
+<% }) %> <%- include('./partials/footer'); -%>
